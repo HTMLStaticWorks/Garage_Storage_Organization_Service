@@ -1,0 +1,182 @@
+/* ==========================================================================
+   GARAGEPRO — RTL OVERRIDES ONLY (Step 5)
+   Toggled via dir="rtl" on <html> or .rtl class on <body>
+   ========================================================================== */
+
+[dir="rtl"],
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   1. DRAWER SLIDE FROM LEFT IN RTL
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .mobile-drawer,
+body.rtl .mobile-drawer {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.25);
+}
+
+[dir="rtl"] .mobile-drawer.active,
+body.rtl .mobile-drawer.active {
+  transform: translateX(0);
+}
+
+/* --------------------------------------------------------------------------
+   2. HERO & BEFORE/AFTER OVERRIDES
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .hero-content,
+body.rtl .hero-content {
+  text-align: right;
+}
+
+@media (max-width: 1024px) {
+  [dir="rtl"] .hero-content,
+  body.rtl .hero-content {
+    text-align: center;
+  }
+}
+
+[dir="rtl"] .ba-image-before,
+body.rtl .ba-image-before {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 2px solid #FFFFFF;
+}
+
+[dir="rtl"] .ba-image-before img,
+body.rtl .ba-image-before img {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .ba-tag-before,
+body.rtl .ba-tag-before {
+  left: auto;
+  right: var(--space-4);
+}
+
+[dir="rtl"] .ba-tag-after,
+body.rtl .ba-tag-after {
+  right: auto;
+  left: var(--space-4);
+}
+
+[dir="rtl"] .floating-badge,
+body.rtl .floating-badge {
+  left: auto;
+  right: -20px;
+}
+
+/* --------------------------------------------------------------------------
+   3. TEXT & LIST ALIGNMENT OVERRIDES
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .story-content h2,
+[dir="rtl"] .story-content p,
+body.rtl .story-content h2,
+body.rtl .story-content p {
+  text-align: right;
+}
+
+@media (max-width: 1024px) {
+  [dir="rtl"] .story-content h2,
+  [dir="rtl"] .story-content p,
+  body.rtl .story-content h2,
+  body.rtl .story-content p {
+    text-align: center;
+  }
+}
+
+[dir="rtl"] .site-footer .footer-col,
+body.rtl .site-footer .footer-col {
+  text-align: right;
+  align-items: flex-start;
+}
+
+[dir="rtl"] .site-footer .footer-col .logo,
+body.rtl .site-footer .footer-col .logo {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .site-footer .footer-col h4,
+[dir="rtl"] .site-footer .footer-col p,
+body.rtl .site-footer .footer-col h4,
+body.rtl .site-footer .footer-col p {
+  text-align: right;
+}
+
+[dir="rtl"] .site-footer .footer-links,
+body.rtl .site-footer .footer-links {
+  align-items: flex-start;
+  text-align: right;
+}
+
+[dir="rtl"] .site-footer .footer-link,
+body.rtl .site-footer .footer-link {
+  text-align: right;
+}
+
+[dir="rtl"] .site-footer .footer-socials,
+body.rtl .site-footer .footer-socials {
+  justify-content: flex-start;
+}
+
+@media (max-width: 1024px) {
+  [dir="rtl"] .site-footer .footer-col,
+  body.rtl .site-footer .footer-col {
+    text-align: right;
+    align-items: flex-start;
+  }
+
+  [dir="rtl"] .site-footer .footer-col h4,
+  [dir="rtl"] .site-footer .footer-col p,
+  body.rtl .site-footer .footer-col h4,
+  body.rtl .site-footer .footer-col p {
+    text-align: right;
+  }
+
+  [dir="rtl"] .site-footer .footer-links,
+  body.rtl .site-footer .footer-links {
+    align-items: flex-start;
+    text-align: right;
+  }
+
+  [dir="rtl"] .site-footer .footer-link,
+  body.rtl .site-footer .footer-link {
+    text-align: right;
+  }
+
+  [dir="rtl"] .site-footer .footer-socials,
+  body.rtl .site-footer .footer-socials {
+    justify-content: flex-start;
+  }
+}
+
+[dir="rtl"] .footer-link:hover,
+body.rtl .footer-link:hover {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .faq-question,
+body.rtl .faq-question {
+  text-align: right;
+}
+
+[dir="rtl"] .faq-icon,
+body.rtl .faq-icon {
+  margin-inline-start: var(--space-4);
+}
+
+[dir="rtl"] .form-group,
+body.rtl .form-group {
+  text-align: right;
+}
+
+[dir="rtl"] .spec-table,
+body.rtl .spec-table {
+  text-align: right;
+}

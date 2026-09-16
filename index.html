@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GaragePro — Luxury Garage & Storage Organization Service</title>
+  <meta name="description" content="Transform your cluttered garage into a pristine, high-performance architectural workspace. Custom cabinetry, epoxy flooring, motorized overhead storage & lifetime guarantee.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "GaragePro",
+    "description": "Professional garage and storage organization service specializing in custom cabinetry, epoxy floors, and high-load wall systems.",
+    "url": "https://garagepro.example.com",
+    "telephone": "+1-800-555-0199",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Francisco",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER / NAVBAR (Step 4 Rules)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="GaragePro Home">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        GARAGE<span>PRO</span>
+      </a>
+
+      <!-- Desktop Navigation Menu (> 1024px) -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Desktop Action Controls -->
+      <div class="nav-actions">
+        <!-- RTL Toggle Button (⇆ Icon) -->
+        <button type="button" class="icon-btn rtl-toggle-btn rtl-toggle-desktop" aria-label="Toggle RTL Direction" title="Switch RTL Layout">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 8 21 12 17 16"/><line x1="3" y1="12" x2="21" y2="12"/><polyline points="7 16 3 12 7 8"/></svg>
+        </button>
+
+        <!-- Theme Toggle Button -->
+        <button type="button" class="icon-btn theme-toggle-btn theme-toggle-desktop" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <span class="theme-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </span>
+        </button>
+
+        <!-- Login Button -->
+        <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+
+        <!-- Hamburger Trigger (≤ 1024px) -->
+        <button type="button" class="hamburger-btn" aria-label="Open Navigation Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop (≤ 1024px) -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        GARAGE<span>PRO</span>
+      </a>
+      <button type="button" class="drawer-close" aria-label="Close Navigation Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <nav class="drawer-links">
+      <a href="index.html" class="drawer-link active">Home</a>
+      <a href="home2.html" class="drawer-link">Home 2</a>
+      <a href="services.html" class="drawer-link">Services</a>
+      <a href="about.html" class="drawer-link">About</a>
+      <a href="blog.html" class="drawer-link">Blog</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
+      <a href="dashboard.html" class="drawer-link">Dashboard</a>
+    </nav>
+
+    <div class="drawer-footer">
+      <div class="drawer-controls">
+        <button type="button" class="icon-btn rtl-toggle-btn" aria-label="Toggle RTL Direction">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 8 21 12 17 16"/><line x1="3" y1="12" x2="21" y2="12"/><polyline points="7 16 3 12 7 8"/></svg>
+        </button>
+        <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </span>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width:100%;">Login</a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       HERO SECTION (Step 9.1 & 11: Interactive Before/After Transformation)
+       ======================================================================== -->
+  <main>
+    <section class="hero-section">
+      <div class="hero-container">
+        <!-- Hero Text & CTA -->
+        <div class="hero-content">
+          <div class="badge-pill">Architectural Precision Storage</div>
+          <h1>Turn Garage Chaos Into <span>Showroom Perfection</span></h1>
+          <p class="lead">Engineered modular cabinetry, heavy-duty polyaspartic flooring, and smart overhead lifts tailored to elevate your home value and workflow.</p>
+          
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg">Book 3D Design Consultation</a>
+            <a href="services.html" class="btn btn-secondary btn-lg">Explore Systems</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="4800" data-suffix="+">4,800+</span>
+              <span class="stat-label">Garages Transformed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="1000" data-suffix=" lbs">1,000 lbs</span>
+              <span class="stat-label">Load Capacity / Unit</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="100" data-suffix="%">100%</span>
+              <span class="stat-label">Lifetime Warranty</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Drag Before / After Transformation Visual -->
+        <div class="hero-visual">
+          <div class="before-after-container" id="hero-ba-slider" title="Drag slider to compare before and after">
+            <!-- After (Clean Luxury Organized Garage) -->
+            <div class="ba-image-after">
+              <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=1200&q=80" alt="Organized luxury garage with modular storage cabinets and clean epoxy floor" loading="lazy">
+              <span class="ba-tag ba-tag-after">After — GaragePro</span>
+            </div>
+            <!-- Before (Cluttered Garage) -->
+            <div class="ba-image-before">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" alt="Cluttered disorganized garage before professional makeover" loading="lazy">
+              <span class="ba-tag ba-tag-before">Before Makeover</span>
+            </div>
+            <!-- Interactive Divider Handle -->
+            <div class="ba-handle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 17 3 12 8 7"/><polyline points="16 7 21 12 16 17"/></svg>
+            </div>
+          </div>
+
+          <!-- Floating Guarantee Badge -->
+          <div class="floating-badge">
+            <div class="floating-badge-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div>
+              <strong style="display:block; font-size:0.95rem;">1-Day Professional Install</strong>
+              <span class="caption">Zero mess, laser-precision fit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SERVICES SECTION (Card Grid - Step 9.1 & Step 3 Alignment)
+         ======================================================================== -->
+    <section class="section section-subtle">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill">Craftsmanship Services</div>
+          <h2>Engineered Systems for Every Storage Need</h2>
+          <p class="lead">From high-gloss commercial-grade polyaspartic coatings to modular welded steel cabinets, we maximize every cubic inch of your garage space.</p>
+        </div>
+
+        <div class="card-grid">
+          <!-- Card 1 -->
+          <div class="card">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80" alt="Custom modular storage cabinetry" loading="lazy">
+            </div>
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
+            <h3>Custom Modular Cabinetry</h3>
+            <p>18-gauge cold-rolled steel cabinetry with soft-close hinges, full-extension drawers, and customizable tool trays.</p>
+            <a href="services.html" class="btn btn-secondary btn-sm">Explore Cabinets</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80" alt="Industrial polyaspartic and epoxy floor coating" loading="lazy">
+            </div>
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 22 1-1h18l1 1"/><path d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16"/><path d="M9 18h6"/></svg>
+            </div>
+            <h3>Polyaspartic & Epoxy Floors</h3>
+            <p>Diamond-grind prepared multi-layer polyaspartic flooring that resists hot-tire pickup, chemical spills, and UV fading.</p>
+            <a href="services.html" class="btn btn-secondary btn-sm">Floor Coatings</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=800&q=80" alt="Heavy-duty slatwall storage panel system" loading="lazy">
+            </div>
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+            </div>
+            <h3>Heavy-Duty Slatwall Panels</h3>
+            <p>Interlocking cellular PVC slatwall rated at 75 lbs per square inch. Accommodates 60+ modular hooks, baskets, and racks.</p>
+            <a href="services.html" class="btn btn-secondary btn-sm">Slatwall Systems</a>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Motorized overhead garage ceiling storage rack" loading="lazy">
+            </div>
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="m17 5-5-3-5 3"/><path d="m17 19-5 3-5-3"/><rect width="20" height="6" x="2" y="9" rx="1"/></svg>
+            </div>
+            <h3>Motorized Overhead Lifts</h3>
+            <p>Reclaim ceiling clearance with smartphone-controlled overhead motorized racks supporting up to 800 lbs of seasonal gear.</p>
+            <a href="services.html" class="btn btn-secondary btn-sm">Overhead Racks</a>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="Precision workbench station with integrated power" loading="lazy">
+            </div>
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Precision Workbenches</h3>
+            <p>Solid butcher block and stainless steel countertops with integrated LED task lighting, power strips, and locking tool banks.</p>
+            <a href="services.html" class="btn btn-secondary btn-sm">Workbenches</a>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Commercial fleet and luxury collector garage organization" loading="lazy">
+            </div>
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.1 11.2 2 11.7 2 12.2V16c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+            </div>
+            <h3>Collector Suite Fit-Outs</h3>
+            <p>Tailored architectural transformations for exotic car collectors, automotive enthusiasts, and luxury residential estates.</p>
+            <a href="services.html" class="btn btn-secondary btn-sm">Collector Suites</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         ABOUT / CRAFTSMANSHIP SECTION (Step 9.1 Story + Visuals)
+         ======================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-image-wrap">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80" alt="Architectural 3D garage spatial planning" loading="lazy">
+          </div>
+          <div class="story-content">
+            <div class="badge-pill">Architectural Standard</div>
+            <h2>We Treat Your Garage as an Extension of Your Luxury Home</h2>
+            <p>Since 2014, GaragePro has pioneered precision engineering for residential garages. We eliminate cluttered floor space using 3D laser-scanned spatial mapping and heavy-gauge architectural grade hardware.</p>
+            <p>Every bolt, track, and cabinet bracket is engineered to withstand extreme temperature fluctuations and heavy industrial loads, ensuring lifelong reliability.</p>
+            
+            <div class="story-highlights">
+              <div class="highlight-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>3D LiDAR Laser Scanning</span>
+              </div>
+              <div class="highlight-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Heavy-Gauge Welded Steel</span>
+              </div>
+              <div class="highlight-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Certified Master Installers</span>
+              </div>
+              <div class="highlight-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Transferable Lifetime Warranty</span>
+              </div>
+            </div>
+
+            <div class="story-actions" style="margin-top: var(--space-8);">
+              <a href="about.html" class="btn btn-primary">Read Our Engineering Story</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         FEATURES & HIGHLIGHTS GRID (Step 9.1)
+         ======================================================================== -->
+    <section class="section section-subtle">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill">The GaragePro Advantage</div>
+          <h2>Why Homeowners Trust Our Precision</h2>
+          <p class="lead">From initial 3D visualization to our dust-free installation process, experience seamless professionalism.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3>Photorealistic 3D Renders</h3>
+            <p>See exactly how your cabinetry, flooring, and wall racks will look before we install a single component.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Rapid 24-48 Hr Turnaround</h3>
+            <p>Our dedicated crew pre-engineers components off-site, completing full installs within 1 to 2 days.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Commercial Grade Durability</h3>
+            <p>Heavy powder-coated steel hardware impervious to humidity, rust, automotive fluids, and heavy tool impact.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            </div>
+            <h3>100% Satisfaction Guarantee</h3>
+            <p>Every installation includes our structural warranty, post-install safety audit, and ongoing customer support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         TESTIMONIALS SECTION (Step 9.1 Grid)
+         ======================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill">Client Stories</div>
+          <h2>Transformations That Speak for Themselves</h2>
+          <p class="lead">Discover how GaragePro helped luxury homeowners, collectors, and families maximize their space.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-quote">"GaragePro took our chaotic 3-car garage packed with sports gear and turned it into an architectural showroom. The motorized ceiling lifts and polyaspartic floor look like a high-end luxury dealership."</p>
+            <div class="author-info">
+              <div class="author-avatar">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Marcus Sterling" loading="lazy">
+              </div>
+              <span class="author-name">Marcus Sterling</span>
+              <span class="author-location">Palo Alto, CA • 3-Car Garage Makeover</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-quote">"The 3D design consultation was incredibly detailed. They showed me exactly where each bin, bike, and tool chest would live. The team completed the install in just 2 days with zero dust."</p>
+            <div class="author-info">
+              <div class="author-avatar">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Elena Vance" loading="lazy">
+              </div>
+              <span class="author-name">Elena Vance</span>
+              <span class="author-location">Scottsdale, AZ • Custom Cabinet & Slatwall</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-quote">"As an avid woodworker and car enthusiast, I needed 1,000lb load-rated benches and organized power channels. GaragePro delivered commercial-grade perfection."</p>
+            <div class="author-info">
+              <div class="author-avatar">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="David Chen" loading="lazy">
+              </div>
+              <span class="author-name">David Chen</span>
+              <span class="author-location">Austin, TX • Pro Workshop Suite</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CTA BANNER (Step 9.1 Full-Width CTA)
+         ======================================================================== -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Ready for Your Garage Transformation?</h2>
+          <p>Schedule a complimentary in-home or virtual 3D laser consultation with our certified storage engineers.</p>
+          <div class="btn-group">
+            <a href="contact.html" class="btn btn-primary btn-lg">Request Free 3D Design Quote</a>
+            <a href="services.html" class="btn btn-secondary btn-lg">View Service Packages</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER (Step 10 Rules)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: var(--space-4);">
+            <div class="logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            GARAGE<span>PRO</span>
+          </a>
+          <p>The premier luxury garage organization and architectural storage service. Engineered for lifetime durability, performance, and craftsmanship.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon-btn" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9 10 15"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home Overview</a>
+            <a href="home2.html" class="footer-link">Home 2 (Visualizer)</a>
+            <a href="services.html" class="footer-link">Service Systems</a>
+            <a href="about.html" class="footer-link">About & Standards</a>
+            <a href="blog.html" class="footer-link">Transformation Blog</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Company & Auth -->
+        <div class="footer-col">
+          <h4>Portal & Client</h4>
+          <div class="footer-links">
+            <a href="dashboard.html" class="footer-link">Project Tracker</a>
+            <a href="contact.html" class="footer-link">Book Consultation</a>
+            <a href="login.html" class="footer-link">Client Login</a>
+            <a href="register.html" class="footer-link">Register Account</a>
+            <a href="coming-soon.html" class="footer-link">3D AR App (Soon)</a>
+            <a href="404.html" class="footer-link">Error Page (404)</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h4>Design Insights</h4>
+          <p>Subscribe for garage makeover tips, seasonal storage guides, and exclusive offers.</p>
+          <form class="footer-newsletter-form validate-form" novalidate>
+            <div class="form-success-alert" style="display:none;">Thank you for subscribing!</div>
+            <div class="input-with-btn">
+              <input type="email" class="footer-input" placeholder="Your email address" required aria-label="Email address for newsletter">
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </div>
+            <span class="form-error-msg">Please enter a valid email address.</span>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 GaragePro Organization Services. All rights reserved. Precision Craftsmanship & Lifetime Warranty Guaranteed.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
