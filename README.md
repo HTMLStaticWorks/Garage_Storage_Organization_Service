@@ -50,7 +50,6 @@ Garage & Storage Organization Service/
 ├── contact.html            # 3D Consultation & quote form, direct hotline cards, map placeholder
 ├── login.html              # Centered auth card (Email, Password, Google, Apple, Register link)
 ├── register.html           # Centered auth card (Name, Email, Password, Confirm, Terms, Social buttons)
-├── dashboard.html          # Client project tracker, 3D render status, specs, engineer messenger
 ├── 404.html                # Custom blueprint 404 error page with quick links
 ├── coming-soon.html        # Countdown timer & early beta access signup for iOS AR LiDAR App
 ├── assets/
