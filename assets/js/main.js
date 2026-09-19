@@ -125,10 +125,27 @@ function initRTLToggle() {
     btn.addEventListener('click', () => {
       const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
       const newRTL = !isRTL;
-      applyRTL(newRTL);
-      localStorage.setItem('garagepro_rtl', newRTL.toString());
-      // Re-adjust slider positions
-      initBeforeAfterSliders();
+      
+      const mobileDrawer = document.querySelector('.mobile-drawer');
+      const drawerBackdrop = document.querySelector('.drawer-backdrop');
+      
+      // If clicked from inside the mobile drawer, close it first to prevent snapping
+      if (mobileDrawer && mobileDrawer.classList.contains('active') && btn.closest('.mobile-drawer')) {
+        mobileDrawer.classList.remove('active');
+        if (drawerBackdrop) drawerBackdrop.classList.remove('active');
+        document.body.style.overflow = '';
+        
+        // Wait for the drawer transition to finish before switching layout
+        setTimeout(() => {
+          applyRTL(newRTL);
+          localStorage.setItem('garagepro_rtl', newRTL.toString());
+          initBeforeAfterSliders();
+        }, 350);
+      } else {
+        applyRTL(newRTL);
+        localStorage.setItem('garagepro_rtl', newRTL.toString());
+        initBeforeAfterSliders();
+      }
     });
   });
 }
@@ -398,3 +415,29 @@ function initGarageEstimator() {
   cabinetCheck?.addEventListener('change', calculateTotal);
   overheadCheck?.addEventListener('change', calculateTotal);
 }
+
+/* --------------------------------------------------------------------------
+   BACK TO TOP BUTTON
+   -------------------------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+  // Inject the button into the DOM
+  const btnHtml = '<button id="backToTop" class="back-to-top" aria-label="Back to Top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"></path></svg></button>';
+  document.body.insertAdjacentHTML('beforeend', btnHtml);
+
+  const backToTopBtn = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  }, { passive: true });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});

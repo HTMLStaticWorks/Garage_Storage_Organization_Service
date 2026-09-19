@@ -180,3 +180,9 @@ body.rtl .form-group {
 body.rtl .spec-table {
   text-align: right;
 }
+
+[dir="rtl"] .auth-controls,
+body.rtl .auth-controls {
+  right: auto;
+  left: var(--space-4);
+}

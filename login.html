@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Client Login — GaragePro</title>
+  <title>Client Login â€” GaragePro</title>
   <meta name="description" content="Access your GaragePro 3D project portal, track transformation progress, review floor plans, and communicate with your project manager.">
   
   <link rel="stylesheet" href="assets/css/style.css">
@@ -11,17 +11,30 @@
 </head>
 <body class="auth-body">
 
+  <div class="auth-controls">
+    <!-- RTL Toggle Button -->
+    <button type="button" class="icon-btn rtl-toggle-btn" aria-label="Toggle RTL Direction" title="Switch RTL Layout">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 8 21 12 17 16"/><line x1="3" y1="12" x2="21" y2="12"/><polyline points="7 16 3 12 7 8"/></svg>
+    </button>
+    <!-- Theme Toggle Button -->
+    <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+      <span class="theme-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </span>
+    </button>
+  </div>
+
   <!-- ========================================================================
-       AUTH CARD (Step 9.7: Centered, No Scroll, No Theme Toggle, No Back Button)
+       AUTH CARD (Step 9.7: Centered)
        ======================================================================== -->
   <div class="auth-card">
     <div class="auth-header">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <div class="logo-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         GARAGE<span>PRO</span>
-      </div>
+      </a>
       <h2>Client Portal Login</h2>
       <p class="caption">Enter your credentials to access your 3D transformation tracker.</p>
     </div>
@@ -38,7 +51,7 @@
 
       <div class="form-group">
         <label class="form-label" for="login-password">Password <span class="required-star">*</span></label>
-        <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+        <input type="password" id="login-password" class="form-control" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required>
         <span class="form-error-msg">Password must be at least 8 characters.</span>
       </div>
 
@@ -78,3 +91,4 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+

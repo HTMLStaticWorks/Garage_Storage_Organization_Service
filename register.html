@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register Project Account — GaragePro</title>
+  <title>Register Project Account â€” GaragePro</title>
   <meta name="description" content="Create your GaragePro client portal account to review 3D renders, track installation milestones, and manage warranty records.">
   
   <link rel="stylesheet" href="assets/css/style.css">
@@ -11,17 +11,30 @@
 </head>
 <body class="auth-body">
 
+  <div class="auth-controls">
+    <!-- RTL Toggle Button -->
+    <button type="button" class="icon-btn rtl-toggle-btn" aria-label="Toggle RTL Direction" title="Switch RTL Layout">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 8 21 12 17 16"/><line x1="3" y1="12" x2="21" y2="12"/><polyline points="7 16 3 12 7 8"/></svg>
+    </button>
+    <!-- Theme Toggle Button -->
+    <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+      <span class="theme-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </span>
+    </button>
+  </div>
+
   <!-- ========================================================================
-       AUTH CARD (Step 9.8: Centered, No Scroll, No Theme Toggle, No Back Button)
+       AUTH CARD (Step 9.8: Centered)
        ======================================================================== -->
   <div class="auth-card" style="max-width: 480px;">
     <div class="auth-header" style="margin-bottom: var(--space-6);">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <div class="logo-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         GARAGE<span>PRO</span>
-      </div>
+      </a>
       <h2>Create Client Account</h2>
       <p class="caption">Register to access project blueprints and milestone tracking.</p>
     </div>
@@ -98,3 +111,4 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
