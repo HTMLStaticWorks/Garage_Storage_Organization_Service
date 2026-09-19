@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <title>Register Project Account â€” GaragePro</title>
+  <title>Register Project Account &mdash; GaragePro</title>
   <meta name="description" content="Create your GaragePro client portal account to review 3D renders, track installation milestones, and manage warranty records.">
   
   <link rel="stylesheet" href="assets/css/style.css">
@@ -46,28 +46,36 @@
 
       <div class="form-group">
         <label class="form-label" for="reg-name">Full Name <span class="required-star">*</span></label>
-        <input type="text" id="reg-name" class="form-control" placeholder="Marcus Sterling" required>
+        <input type="text" id="reg-name" class="form-control" placeholder="Full Name" required>
         <span class="form-error-msg">Please enter your full name.</span>
       </div>
 
       <div class="form-group">
         <label class="form-label" for="reg-email">Email Address <span class="required-star">*</span></label>
-        <input type="email" id="reg-email" class="form-control" placeholder="marcus@example.com" required>
+        <input type="email" id="reg-email" class="form-control" placeholder="Email Address" required>
         <span class="form-error-msg">Please enter a valid email address.</span>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3);">
-        <div class="form-group">
-          <label class="form-label" for="reg-password">Password <span class="required-star">*</span></label>
-          <input type="password" id="reg-password" class="form-control" placeholder="Min 8 chars" required>
-          <span class="form-error-msg">Min 8 characters required.</span>
+      <div class="form-group">
+        <label class="form-label" for="reg-password">Password <span class="required-star">*</span></label>
+        <div class="password-input-wrap">
+          <input type="password" id="reg-password" class="form-control" placeholder="Password (Min 8 characters)" required>
+          <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility" title="Show/Hide Password" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
         </div>
+        <span class="form-error-msg">Min 8 characters required.</span>
+      </div>
 
-        <div class="form-group">
-          <label class="form-label" for="confirmPassword">Confirm <span class="required-star">*</span></label>
-          <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Repeat password" required>
-          <span class="form-error-msg">Passwords must match.</span>
+      <div class="form-group">
+        <label class="form-label" for="confirmPassword">Confirm Password <span class="required-star">*</span></label>
+        <div class="password-input-wrap">
+          <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+          <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility" title="Show/Hide Password" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
         </div>
+        <span class="form-error-msg">Passwords must match.</span>
       </div>
 
       <div class="form-group" style="margin-bottom: var(--space-4);">

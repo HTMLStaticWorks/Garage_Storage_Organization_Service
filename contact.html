@@ -109,7 +109,7 @@
       <div class="container">
         <div class="story-grid" style="align-items: start;">
           <!-- Left: Contact Form with Validation -->
-          <div style="background: var(--bg-surface); padding: var(--space-8); border-radius: var(--radius-global); border: 1px solid var(--border-color); box-shadow: var(--shadow-global);">
+          <div class="contact-form-card">
             <h3 style="margin-bottom: var(--space-4); text-align: left;">Request Free 3D Design Proposal</h3>
             
             <form class="validate-form" novalidate>
@@ -117,7 +117,7 @@
                 Thank you! Your 3D design consultation request has been received. Our engineer will contact you within 24 hours.
               </div>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+              <div class="form-row-2col">
                 <div class="form-group">
                   <label class="form-label" for="contact-name">First & Last Name <span class="required-star">*</span></label>
                   <input type="text" id="contact-name" class="form-control" placeholder="Marcus Sterling" required>
@@ -136,7 +136,7 @@
                 <span class="form-error-msg">Please enter a valid email address.</span>
               </div>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+              <div class="form-row-2col">
                 <div class="form-group">
                   <label class="form-label" for="contact-garage-size">Garage Size</label>
                   <select id="contact-garage-size" class="form-control">
@@ -176,9 +176,9 @@
           </div>
 
           <!-- Right: Direct Contacts & Map Placeholder -->
-          <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+          <div class="contact-info-col">
             <!-- Contact Cards -->
-            <div class="card" style="align-items: flex-start; text-align: left; padding: var(--space-6);">
+            <div class="card contact-info-card">
               <div class="card-icon" style="margin-bottom: var(--space-3);">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               </div>
@@ -187,7 +187,7 @@
               <span class="caption">Mon–Sat: 7:00 AM – 7:00 PM PST</span>
             </div>
 
-            <div class="card" style="align-items: flex-start; text-align: left; padding: var(--space-6);">
+            <div class="card contact-info-card">
               <div class="card-icon" style="margin-bottom: var(--space-3);">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
@@ -196,8 +196,31 @@
               <span class="caption">San Francisco Bay Area, CA 94107</span>
             </div>
 
+            <!-- Social Media Channels -->
+            <div class="card contact-info-card">
+              <h4 style="margin-bottom: 4px; text-align: left;">Connect With Us</h4>
+              <p style="margin-bottom: var(--space-4); text-align: left; font-size: 0.95rem; color: var(--text-secondary);">Follow our architectural transformations, 3D laser project tours, and garage design tips.</p>
+              <div class="contact-socials" style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook" title="Facebook">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram" title="Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube" title="YouTube">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9 10 15"/></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter" title="Twitter / X">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                </a>
+              </div>
+            </div>
+
             <!-- Architectural Map Area Placeholder -->
-            <div style="height: 260px; border-radius: var(--radius-global); overflow: hidden; border: 1px solid var(--border-color); background: var(--bg-surface); position: relative; display: flex; box-shadow: var(--shadow-global);">
+            <div style="height: 260px; border-radius: var(--radius-global); overflow: hidden; border: 1px solid var(--border-color); background: var(--bg-surface); position: relative; display: flex; box-shadow: var(--shadow-global); width: 100%; box-sizing: border-box;">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019283737299!2d-122.399996!3d37.766299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807c4273cba7%3A0x8e8334bc8ba20d6!2sSan%20Francisco%2C%20CA%2094107!5e0!3m2!1sen!2sus!4v1689622728987!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>

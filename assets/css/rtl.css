@@ -17,12 +17,16 @@ body.rtl .mobile-drawer {
   right: auto;
   left: 0;
   transform: translateX(-100%);
+  visibility: hidden;
+  opacity: 0;
   box-shadow: 10px 0 30px rgba(0, 0, 0, 0.25);
 }
 
 [dir="rtl"] .mobile-drawer.active,
 body.rtl .mobile-drawer.active {
   transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
 }
 
 /* --------------------------------------------------------------------------
@@ -185,4 +189,19 @@ body.rtl .spec-table {
 body.rtl .auth-controls {
   right: auto;
   left: var(--space-4);
+}
+
+/* Back to top button position in RTL */
+[dir="rtl"] .back-to-top,
+body.rtl .back-to-top {
+  right: auto;
+  left: 28px;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .back-to-top,
+  body.rtl .back-to-top {
+    right: auto;
+    left: 20px;
+  }
 }

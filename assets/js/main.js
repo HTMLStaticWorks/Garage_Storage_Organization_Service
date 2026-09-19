@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFormValidation();
   initStatsCounter();
   initGarageEstimator();
+  initPasswordToggle();
 });
 
 /* --------------------------------------------------------------------------
@@ -129,13 +130,13 @@ function initRTLToggle() {
       const mobileDrawer = document.querySelector('.mobile-drawer');
       const drawerBackdrop = document.querySelector('.drawer-backdrop');
       
-      // If clicked from inside the mobile drawer, close it first to prevent snapping
-      if (mobileDrawer && mobileDrawer.classList.contains('active') && btn.closest('.mobile-drawer')) {
+      // If mobile drawer is active, close it first to prevent layout snapping
+      if (mobileDrawer && mobileDrawer.classList.contains('active')) {
         mobileDrawer.classList.remove('active');
         if (drawerBackdrop) drawerBackdrop.classList.remove('active');
         document.body.style.overflow = '';
         
-        // Wait for the drawer transition to finish before switching layout
+        // Wait for the drawer close animation to finish before switching direction
         setTimeout(() => {
           applyRTL(newRTL);
           localStorage.setItem('garagepro_rtl', newRTL.toString());
@@ -151,6 +152,9 @@ function initRTLToggle() {
 }
 
 function applyRTL(isRTL) {
+  // Prevent any CSS transition flash during layout direction change
+  document.documentElement.classList.add('no-transition');
+
   if (isRTL) {
     document.documentElement.setAttribute('dir', 'rtl');
     document.body.classList.add('rtl');
@@ -158,6 +162,14 @@ function applyRTL(isRTL) {
     document.documentElement.removeAttribute('dir');
     document.body.classList.remove('rtl');
   }
+
+  // Trigger synchronous layout reflow so position updates instantly without transition
+  void document.documentElement.offsetHeight;
+
+  // Restore CSS transitions on the next animation frame
+  requestAnimationFrame(() => {
+    document.documentElement.classList.remove('no-transition');
+  });
 }
 
 /* --------------------------------------------------------------------------
@@ -420,24 +432,59 @@ function initGarageEstimator() {
    BACK TO TOP BUTTON
    -------------------------------------------------------------------------- */
 document.addEventListener('DOMContentLoaded', () => {
-  // Inject the button into the DOM
-  const btnHtml = '<button id="backToTop" class="back-to-top" aria-label="Back to Top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"></path></svg></button>';
-  document.body.insertAdjacentHTML('beforeend', btnHtml);
+  // Inject the button into the DOM if not already present
+  if (!document.getElementById('backToTop')) {
+    const btnHtml = '<button id="backToTop" class="back-to-top" aria-label="Back to Top" title="Back to Top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"></path></svg></button>';
+    document.body.insertAdjacentHTML('beforeend', btnHtml);
+  }
 
   const backToTopBtn = document.getElementById('backToTop');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.add('show');
+  const checkScroll = () => {
+    if (window.scrollY > 250) {
+      backToTopBtn?.classList.add('show');
     } else {
-      backToTopBtn.classList.remove('show');
+      backToTopBtn?.classList.remove('show');
     }
-  }, { passive: true });
+  };
 
-  backToTopBtn.addEventListener('click', () => {
+  checkScroll();
+  window.addEventListener('scroll', checkScroll, { passive: true });
+
+  backToTopBtn?.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   });
 });
+
+/* --------------------------------------------------------------------------
+   PASSWORD EYE ICON TOGGLE
+   -------------------------------------------------------------------------- */
+function initPasswordToggle() {
+  const toggleBtns = document.querySelectorAll('.password-toggle-btn');
+
+  toggleBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const wrap = btn.closest('.password-input-wrap');
+      const input = wrap?.querySelector('input');
+      if (!input) return;
+
+      const isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+
+      // Toggle Eye vs Eye-Off SVG Icon
+      if (isPassword) {
+        // Eye-Off Icon (Visible state)
+        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.52 13.52 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" y1="2" x2="22" y2="22"/></svg>`;
+        btn.setAttribute('title', 'Hide Password');
+      } else {
+        // Eye Icon (Hidden state)
+        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>`;
+        btn.setAttribute('title', 'Show Password');
+      }
+    });
+  });
+}
