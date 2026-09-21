@@ -191,6 +191,15 @@ body.rtl .auth-controls {
   left: var(--space-4);
 }
 
+@media (max-width: 640px) {
+  [dir="rtl"] .auth-controls,
+  body.rtl .auth-controls {
+    position: static;
+    left: auto;
+    right: auto;
+  }
+}
+
 /* Back to top button position in RTL */
 [dir="rtl"] .back-to-top,
 body.rtl .back-to-top {

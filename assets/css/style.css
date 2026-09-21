@@ -1601,6 +1601,31 @@ select.form-control {
   white-space: nowrap !important;
 }
 
+@media (max-width: 640px) {
+  .auth-body {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--space-4) var(--space-4) var(--space-8);
+  }
+
+  .auth-controls {
+    position: static;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+    z-index: 10;
+  }
+
+  .auth-card {
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-5);
+  }
+}
+
 @media (max-width: 480px) {
   .auth-row-options {
     font-size: 0.82rem;
@@ -1611,6 +1636,28 @@ select.form-control {
   .auth-row-options .forgot-password-link {
     font-size: 0.82rem;
     white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-body {
+    padding: var(--space-3) var(--space-3) var(--space-6);
+  }
+
+  .auth-controls {
+    margin-bottom: var(--space-2);
+  }
+
+  .auth-card {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .auth-header {
+    margin-bottom: var(--space-5);
+  }
+
+  .auth-header h2 {
+    font-size: 1.5rem;
   }
 }
 
