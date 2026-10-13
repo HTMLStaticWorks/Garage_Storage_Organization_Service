@@ -76,6 +76,21 @@ body.rtl .floating-badge {
   right: -20px;
 }
 
+[dir="rtl"] .proof-spotlight-img .proof-badge,
+body.rtl .proof-spotlight-img .proof-badge {
+  left: auto;
+  right: var(--space-4);
+}
+
+[dir="rtl"] .proof-spotlight-content,
+[dir="rtl"] .proof-spotlight-content h3,
+[dir="rtl"] .proof-spotlight-content p,
+body.rtl .proof-spotlight-content,
+body.rtl .proof-spotlight-content h3,
+body.rtl .proof-spotlight-content p {
+  text-align: right;
+}
+
 /* --------------------------------------------------------------------------
    3. TEXT & LIST ALIGNMENT OVERRIDES
    -------------------------------------------------------------------------- */
@@ -213,4 +228,56 @@ body.rtl .back-to-top {
     right: auto;
     left: 20px;
   }
+}
+
+/* How It Works, Packages, Portfolio & 8 Services in RTL */
+[dir="rtl"] .how-step-card,
+body.rtl .how-step-card,
+[dir="rtl"] .package-card,
+body.rtl .package-card,
+[dir="rtl"] .package-features,
+body.rtl .package-features,
+[dir="rtl"] .portfolio-body,
+body.rtl .portfolio-body,
+[dir="rtl"] .portfolio-body h3,
+body.rtl .portfolio-body h3,
+[dir="rtl"] .portfolio-body p,
+body.rtl .portfolio-body p,
+[dir="rtl"] .service-8-body,
+body.rtl .service-8-body,
+[dir="rtl"] .service-8-body h3,
+body.rtl .service-8-body h3,
+[dir="rtl"] .service-8-body p,
+body.rtl .service-8-body p {
+  text-align: right;
+}
+
+[dir="rtl"] .portfolio-badge,
+body.rtl .portfolio-badge {
+  left: auto;
+  right: var(--space-4);
+}
+
+/* Card CTA Action Buttons in RTL */
+[dir="rtl"] .card-actions,
+body.rtl .card-actions,
+[dir="rtl"] .service-8-actions,
+body.rtl .service-8-actions,
+[dir="rtl"] .portfolio-actions,
+body.rtl .portfolio-actions,
+[dir="rtl"] .package-cta-group,
+body.rtl .package-cta-group {
+  align-items: stretch;
+}
+
+[dir="rtl"] .card-actions .btn,
+body.rtl .card-actions .btn,
+[dir="rtl"] .service-8-actions .btn,
+body.rtl .service-8-actions .btn,
+[dir="rtl"] .portfolio-actions .btn,
+body.rtl .portfolio-actions .btn,
+[dir="rtl"] .package-cta-group .btn,
+body.rtl .package-cta-group .btn {
+  text-align: center;
+  justify-content: center;
 }

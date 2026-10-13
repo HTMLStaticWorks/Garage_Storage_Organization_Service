@@ -94,11 +94,16 @@
        CONTACT HERO & FORM SECTION
        ======================================================================== -->
   <main>
-    <section class="hero-section" style="padding-bottom: var(--space-8);">
+    <section class="hero-section hero-dark page-hero" style="background: linear-gradient(rgba(11, 19, 32, 0.84), rgba(11, 19, 32, 0.90)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; min-height: 560px;">
       <div class="container" style="text-align: center;">
         <div class="badge-pill">Complimentary 3D Consultation</div>
         <h1 style="max-width: 860px; margin-inline: auto;">Let’s Design Your <span>Dream Garage</span></h1>
         <p class="lead" style="max-width: 650px; margin-inline: auto;">Submit your garage dimensions or request an in-home laser measurement. Our structural engineers will provide a photorealistic 3D render and itemized quote.</p>
+
+        <div class="hero-actions" style="justify-content: center; margin-top: var(--space-6);">
+          <a href="#quote-form" class="btn btn-primary btn-lg">Get a Free Quote</a>
+          <a href="#quote-form" class="btn btn-secondary btn-lg">Book a Consultation</a>
+        </div>
       </div>
     </section>
 
@@ -107,7 +112,7 @@
       <div class="container">
         <div class="story-grid" style="align-items: start;">
           <!-- Left: Contact Form with Validation -->
-          <div class="contact-form-card">
+          <div class="contact-form-card" id="quote-form">
             <h3 style="margin-bottom: var(--space-4); text-align: left;">Request Free 3D Design Proposal</h3>
             
             <form class="validate-form" novalidate>
