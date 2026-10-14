@@ -287,6 +287,10 @@ strong, b {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+.pillars-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -2493,6 +2497,21 @@ select.form-control {
     width: 22px;
     height: 22px;
   }
+
+  /* Services Page: 3 columns with 4th (last) card centered in desktop view */
+  .pillars-grid,
+  #storage-systems .card-grid,
+  .portfolio-grid,
+  #portfolio .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .pillars-grid > .card:last-child,
+  #storage-systems .card-grid > .card:last-child,
+  .portfolio-grid > .portfolio-card:last-child,
+  #portfolio .portfolio-grid > .portfolio-card:last-child {
+    grid-column: 2 !important;
+  }
 }
 
 /* Contact Page Specific Mobile Layout & Card Alignment Rules */
@@ -2773,9 +2792,18 @@ select.form-control {
 
   /* Tablet Grids (Services & Portfolio) */
   .services-8-grid,
-  .portfolio-grid {
+  .portfolio-grid,
+  .pillars-grid,
+  #storage-systems .card-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: var(--space-6) !important;
+  }
+
+  .pillars-grid > .card:last-child,
+  #storage-systems .card-grid > .card:last-child,
+  .portfolio-grid > .portfolio-card:last-child,
+  #portfolio .portfolio-grid > .portfolio-card:last-child {
+    grid-column: auto !important;
   }
 
   .service-packages-grid {
@@ -2874,9 +2902,18 @@ select.form-control {
   /* Mobile Grids (≤ 768px): Single column for Services, Portfolio & Packages */
   .services-8-grid,
   .portfolio-grid,
+  .pillars-grid,
+  #storage-systems .card-grid,
   .service-packages-grid {
     grid-template-columns: 1fr !important;
     gap: var(--space-6) !important;
+  }
+
+  .pillars-grid > .card:last-child,
+  #storage-systems .card-grid > .card:last-child,
+  .portfolio-grid > .portfolio-card:last-child,
+  #portfolio .portfolio-grid > .portfolio-card:last-child {
+    grid-column: auto !important;
   }
 
   .service-8-body h3 {
